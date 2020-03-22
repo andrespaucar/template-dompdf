@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>Reporte de Ventas</title>
+</head>
+<body>
+    <style>
+        .thtable{font-weight:bold; border:1px solid #eee;}
+        .center{text-align:center}
+        /* .th { 
+            font-size: 14px;
+            color: #fff;
+            line-height: 1.4;
+            background-color: #6c7ae0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        } */
+    </style>
+    <div class="container">
+        <table style="padding-bottom: 12px; padding-top: 10px;">
+            <thead>
+                <tr>
+                    <th align="left" colspan="2" >{{nombre_comercial}}</th>
+                    <th align="center" colspan="6">{{titulo_reporte}}</th>
+                    <th align="right" colspan="3">{{fechas}}</th>
+                </tr>
+            </thead>
+        </table>
+         
+        <table  class="tablepe">
+            <thead>
+                <tr class="body">
+                    <th class="center" style="font-weight:bold; border:1px solid #1d1d1d;background-color: #6c7ae0;color:#fff" width="5%">#</th>
+                    <th class="center" style="font-weight:bold; border:1px solid #1d1d1d;background-color: #6c7ae0;color:#fff" width="8%">Fecha</th>
+                    <th class="center" style="font-weight:bold; border:1px solid #1d1d1d;background-color: #6c7ae0;color:#fff"  width="6%">Serie</th>
+                    <th class="center" style="font-weight:bold; border:1px solid #1d1d1d;background-color: #6c7ae0;color:#fff"  width="6%">Numero</th>
+                    <th class="center" style="font-weight:bold; border:1px solid #1d1d1d;background-color: #6c7ae0;color:#fff"  width="12%">Cliente</th>
+                    <!-- <th class="center th">Productos Vendidos</th> -->
+                    <th class="center" style="font-weight:bold; border:1px solid #1d1d1d;background-color: #6c7ae0;color:#fff">
+                        <table>
+                        <tbody>
+                            <tr >
+                                <td class="center" colspan="5" style="color:#fff"> <b>Productos Vendidos</b></td>
+                            </tr>
+                            <tr >
+                                <td  class="center"  width="16%" style="color:#fff"> <b> Codigo </b></td>
+                                <td class="center" width=39%" style="color:#fff"> <b>Nombre Producto</b></td>
+                                <td class="center" width="12%" style="color:#fff"> <b>Cantidad</b></td>
+                                <td class="center" width="16%" style="color:#fff"> <b>Precio</b></td >
+                                <td class="center" style="color:#fff"> <b>Sub.Total</b></td >
+                            </tr>
+                        </tbody>
+                        </table>
+                    </td>
+                    <th class="center" style="font-weight:bold; border:1px solid #1d1d1d;background-color: #6c7ae0;color:#fff" width="8%">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{table_products_sale}}
+            </tbody>
+        </table>
+       
+    </div>
+     
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Reporte de Ventas</title>
+    <link rel="stylesheet" href="{{link_css}}">
+</head>
+<body>
+    <div class="container">
+        <table style="padding-bottom: 12px; padding-top: 10px;">
+            <thead>
+                <tr>
+                    <th align="left">{{nombre_comercial}}</th>
+                    <th align="center">{{titulo_reporte}}</th>
+                    <th align="right" >{{fechas}}</th>
+                </tr>
+            </thead>
+        </table>
+         
+        <table  class="tablepe">
+            <thead>
+                <tr class="body">
+                    <th class="center th" width="5%">#</th>
+                    <th class="center th" width="8%">Fecha</th>
+                    <th class="center th"  width="6%">Serie</th>
+                    <th class="center th"  width="6%">Numero</th>
+                    <th class="center th"  width="12%">Cliente</th>
+                    <!-- <th class="center th">Productos Vendidos</th> -->
+                    <th class="center th">
+                        <table>
+                        <tbody>
+                            <tr >
+                                <td class="center" colspan="5"> Productos Vendidos </td>
+                            </tr>
+                            <tr >
+                                <td  class="center"  width="16%" >Codigo</td>
+                                <td class="center" width=39%"  >Nombre Producto</td>
+                                <td class="center" width="12%" >Cantidad</td>
+                                <td class="center" width="16%"  >Precio</td >
+                                <td class="center"   >Sub.Total</td >
+                                <!-- <td  class="center" width="15%" style="background-color: red;">Codigo</td>
+                                <td class="center" width=45%" style="background-color: teal;">Nombre Producto</td>
+                                <td class="center" width="12%" style="background-color: red">Cantidad</td>
+                                <td class="center" width="16%" style="background-color: crimson;" >Precio</td >
+                                <td class="center" width="14%" style="background-color: red;">Sub.Total</td > -->
+                            </tr>
+                        </tbody>
+                        </table>
+                    </td>
+                    <th class="center th" width="8%">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{table_products_sale}}
+            </tbody>
+        </table>
+       
+    </div>
+     
+</body>
+</html>
